@@ -1,0 +1,99 @@
+alias ceshi='ssh -i /Users/jd/Desktop/caohaitao.pem caohaitao@39.104.81.250 -p51731'
+
+账号与密码
+chenlerry & 18701115239 & 18701115239@163.com
+18701115239_0e
+
+python常用操作
+>>> import requests
+>>> from requests.sessions import Session
+>>> s = Session()
+>>> r = s.post("https://passport.bitmain.com/login", data=dict(username='18701115239@163.com', password='18701115239_0e'))
+>>> r.text
+
+
+ANTPool liang_03(BCH) liang_04(BTC)
+问题：
+user_id:liang_04
+API_SECRET
+
+
+{"code":0,"message":"ok","data":{"poolHashrate":"4375922125157.567778","activeWorkerNumber":"392463","poolStatus":"Alive","networkDiff":"4143878474754.19","estimateTime":"4119","currentRound":"1271","totalShareNumber":"21314732359052928","totalBlockNumber":"35548"}}
+
+
+
+
+
+
+
+
+问题：
+1.莱特币requests出现403forbidden错误（http://www.btc.top/api/user/get_dashboard?platform=h5&&jsonpCallback=jQuery32106295774139746917_1526301024444&_=1526301024445）
+2.ViaPool中requests,多加一个Accept-Language='zh-cn'参数后，出现错误
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>
+r = requests.get('https://pool.viabtc.com/pool/bch/home/', data=dict(Cookie='__jsluid=2827b839d27d8c38f5de6d8ac54fd704; _ga=GA1.2.72191902.1526302513; _gid=GA1.2.1450918049.1526302513; token=ae0e1e9edc8d7c2c997f3ee6eabdb8a6; session=.eJw9kE1vgkAQhv9KM2cO7GIFTDzYEAkH1thimuWyWXcHusiH4aMpGP970Vqv82aeZ-a9gDhjW8ka6x5WfTugBaprM9E3J6xhdYGXI6yAF_sFS1jFwuiHFScnniLKgveSTYfFLuCEBZsxDbdlWuQLnhwIo5yyzXoNVws0ZnIoe_GNrclG0Y9nnIld1QnVaAQLjH560mTjxGE8pUE0xeFhZm3NzKdxwQn_3I982jtseit3ibqzS1nnz2WsvrKPcDso4gdJ_idvWpObWgwdtuLmocSxPduCzuT1PJdKNcPtcyCeaxNCXqnjwzO-n2xQ_zfzKAUk2kjQR6087SqqfN_NHMQlyqM-enIJ119PPG5l.Ddsa6w.I97ygql-P19RwD6uOQCJ_Jtszhs', Referer='https://pool.viabtc.com/pool/bch/home/', Accept-Language='zh-cn'))
+
+
+
+
+1.模拟登陆
+2.解析数据
+
+pip install requests
+pip install lxml
+
+
+
+
+
+
+
+
+
+
+
+
+作业一：
+head json | awk -F ',' '{print $1}' | awk -F{  '{print $2}'
+head json | awk -F ', ' '{print $2 $3}'
+head json | awk -F ', ' '{print $4}' | awk -F} '{print $1}'
+
+1.解析数值完成
+2.curl下载的源码，不带有算力，5秒后才可以登录
+{"userId":"liang04"}
+
+
+curl -d '{"coin_type":"btc"}' https://slushpool.com/api/v1/web/scalar/statusbar/
+
+
+{"data": {"btc": {"hr_pool_actual": 3213042871.548007, "price": {"CNY": 55402.5, "EUR": 7338.24, "GBP": 6465.82, "USD": 8748.08}}, "profile": {"tzname": "UTC"}, "time": 1526033505}, "error_message": null, "status_code": 0}
+
+curl --silent -d '{"coin_type":"btc"}' https://slushpool.com/api/v1/web/scalar/statusbar/ | awk -F '"hr_pool_actual": ' '{print $2}' | awk -F ',' '{print $1}'
+结果：3237620678.287639
